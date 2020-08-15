@@ -115,6 +115,11 @@ function my_theme_register_required_plugins()
             'slug' => 'advanced-custom-fields',
             'force_activation' => true
         ),
+        array(
+            'name'=>'Classic Editor',
+            'slug'=>'classic-editor',
+            'force_activation' => true
+        ),
 
 
     );

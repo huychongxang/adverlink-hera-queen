@@ -20,6 +20,7 @@ require_once(THEME_DIR . '/TGM-Plugin-Activation-develop/example.php');
 require_once(THEME_DIR . '/functions/after_theme_setup.php');
 require_once(THEME_DIR . '/functions/register_default_post_page.php');
 require_once(THEME_DIR . '/functions/add_custom_columns.php');
+require_once(THEME_DIR . '/functions/add_custom_fields.php');
 /**
  * Custom type
  *  Banner type
