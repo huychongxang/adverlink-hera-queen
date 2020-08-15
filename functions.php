@@ -25,6 +25,6 @@ require_once(THEME_DIR . '/functions/add_custom_fields.php');
 /**
  * Custom type
  *  Banner type
- *
+ *  Image type
  */
 require_once(THEME_DIR . '/functions/register_custom_type.php');

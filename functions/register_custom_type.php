@@ -23,3 +23,27 @@ function register_banner_type()
         'menu_icon' => 'dashicons-images-alt2'
     ]);
 }
+
+// Image Post Type
+add_action('init', 'register_image_type');
+function register_image_type()
+{
+    register_post_type('image', [
+        'supports' => [
+            'title','thumbnail'
+        ],
+        'rewrite' => [
+            'slug' => 'image'
+        ],
+        'has_archive' => true,
+        'public' => true,
+        'labels' => [
+            'name' => __( 'Images', 'hera' ),
+            'add_new_item' =>  __( 'Add New Image', 'hera' ),
+            'edit_item' =>  __( 'Edit Image', 'hera' ),
+            'all_items' => __( 'All Images', 'hera' ),
+            'singular_name' => __( 'Image', 'hera' ),
+        ],
+        'menu_icon' => 'dashicons-camera-alt'
+    ]);
+}
