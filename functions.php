@@ -13,10 +13,12 @@ require_once(THEME_DIR . '/TGM-Plugin-Activation-develop/example.php');
 /**
  * After theme setup
  *  Theme support
- *
+ *  Register Post/Page
+ *  Add custom columns
  */
 
 require_once(THEME_DIR . '/functions/after_theme_setup.php');
+require_once(THEME_DIR . '/functions/register_default_post_page.php');
 require_once(THEME_DIR . '/functions/add_custom_columns.php');
 /**
  * Custom type
