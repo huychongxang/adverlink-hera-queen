@@ -9,3 +9,18 @@ define('THEME_ASSET_WEB', get_stylesheet_directory_uri() . '/assets/web');
  *
  */
 require_once(THEME_DIR . '/TGM-Plugin-Activation-develop/example.php');
+
+/**
+ * After theme setup
+ *  Theme support
+ *
+ */
+
+require_once(THEME_DIR . '/functions/after_theme_setup.php');
+require_once(THEME_DIR . '/functions/add_custom_columns.php');
+/**
+ * Custom type
+ *  Banner type
+ *
+ */
+require_once(THEME_DIR . '/functions/register_custom_type.php');
