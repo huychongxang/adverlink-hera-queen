@@ -1,11 +1,16 @@
 <?php
 define('THEME_URL', get_stylesheet_directory_uri());
 define('THEME_DIR', get_stylesheet_directory());
-define('THEME_ASSET_WEB', get_stylesheet_directory_uri() . '/assets/web');
+define('THEME_ASSET_WEB', get_stylesheet_directory_uri() . '/assets/');
+
+/**
+ * Register Files CSS and JS
+ */
+require_once(THEME_DIR . '/functions/add_file_css_js.php');
 
 /**
  * Required Plugin
- *  
+ *
  *
  */
 require_once(THEME_DIR . '/TGM-Plugin-Activation-develop/example.php');
