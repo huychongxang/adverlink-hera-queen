@@ -38,11 +38,11 @@ function register_image_type()
         'has_archive' => true,
         'public' => true,
         'labels' => [
-            'name' => __('Images', 'hera'),
-            'add_new_item' => __('Add New Image', 'hera'),
-            'edit_item' => __('Edit Image', 'hera'),
-            'all_items' => __('All Images', 'hera'),
-            'singular_name' => __('Image', 'hera'),
+            'name' => __('Thư viện ảnh', 'hera'),
+            'add_new_item' => __('Thêm mới', 'hera'),
+            'edit_item' => __('Sửa', 'hera'),
+            'all_items' => __('Danh sách', 'hera'),
+            'singular_name' => __('Ảnh', 'hera'),
         ],
         'menu_icon' => 'dashicons-camera-alt'
     ]);
