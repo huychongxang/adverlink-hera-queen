@@ -166,7 +166,11 @@ get_header(); ?>
                     <div class="row">
                         <div class="col-md-10 offset-md-1 info__heading">
                             <div class="info__image">
-                                <img class="img-fluid" src="<?php echo THEME_ASSET_WEB; ?>images/khoa-hoc.png" alt="">
+                                <?php
+                                $arrayObject = get_field('image_frame_3');
+                                $url = $arrayObject['url'];
+                                ?>
+                                <img class="img-fluid" src="<?php echo $url; ?>" alt="">
                                 <a class="btn btn--rounded btn-bg--yellow btn--wave register-btn" href="#form-section">đăng
                                     ký</a>
                             </div>

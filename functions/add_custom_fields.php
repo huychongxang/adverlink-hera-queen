@@ -232,3 +232,54 @@ function register_custom_fields_frame_2()
         ]);
     }
 }
+
+// Iframe 3
+add_action('after_setup_theme', 'register_custom_fields_frame_3');
+function register_custom_fields_frame_3()
+{
+    if (function_exists('acf_add_local_field_group')) {
+        acf_add_local_field_group([
+            'key' => 'group_frame_3',
+            'title' => 'Thông tin khóa học',
+            'fields' => [
+                [
+                    'key' => 'image_frame_3',
+                    'label' => 'Ảnh mô tả khóa học',
+                    'name' => 'image_frame_3',
+                    'type' => 'image',
+                    'prefix' => '',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => [
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ],
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                    'readonly' => 0,
+                    'disabled' => 0,
+                ],
+            ],
+            'location' => [
+                [
+                    [
+                        'param' => 'post_type',
+                        'operator' => '==',
+                        'value' => 'page',
+                    ],
+                ],
+            ],
+            'menu_order' => 0,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+        ]);
+    }
+}
