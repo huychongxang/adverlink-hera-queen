@@ -476,15 +476,15 @@ get_header(); ?>
                     <div class="footer__info">
                         <p>
                             <i class="fas fa-map-marker-alt"></i>
-                            Lô D5D, 104 Biệt thự vườn đào, Võ Chí Công, Tây Hồ, Việt Nam
+                            <?php echo get_field('address'); ?>
                         </p>
                         <p>
                             <i class="fas fa-phone-alt"></i>
-                            098 122 45 15
+                            <?php echo get_field('phone'); ?>
                         </p>
                         <p>
                             <i class="fas fa-envelope"></i>
-                            heraqueenfashion@gmail.com
+                            <?php echo get_field('email'); ?>
                         </p>
                     </div>
                 </div>
@@ -493,10 +493,10 @@ get_header(); ?>
                     <p>
                         Theo dõi thêm về Hera Queen tại:
                     </p>
-                    <a href="">
+                    <a href="<?php echo get_field('facebook_link'); ?>" target="_blank">
                         <i class="fab fa-facebook-f text-white social-link"></i>
                     </a>
-                    <a href="">
+                    <a href="<?php echo get_field('youtube_link'); ?>" target="_blank">
                         <i class="fab fa-youtube text-white social-link"></i>
                     </a>
                 </div>
