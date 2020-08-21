@@ -185,128 +185,43 @@ get_header(); ?>
                             <div class="course-slide swiper-container">
                                 <div class="swiper-wrapper">
                                     <!-- slide item -->
-                                    <div class="swiper-slide"
-                                         style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/bg-course.png');">
-                                        <div class="slide__image">
-                                            <img src="<?php echo THEME_ASSET_WEB; ?>images/abc.png" class="img-fluid"
-                                                 alt="">
-                                        </div>
-                                        <div class="slide-content">
-                                            <div class="slide-content__heading">
+                                    <?php
+                                    $course = new WP_Query([
+                                        'post_type' => 'course',
+                                    ]);
+
+                                    while ($course->have_posts()) {
+                                        $course->the_post(); ?>
+                                        <div class="swiper-slide"
+                                             style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/bg-course.png');">
+                                            <div class="slide__image">
+                                                <img src="<?php the_post_thumbnail_url(); ?>"
+                                                     class="img-fluid"
+                                                     alt="">
+                                            </div>
+                                            <div class="slide-content">
+                                                <div class="slide-content__heading">
                           <span>
                             <h3>KHÓA HỌC</h3>
                           </span>
-                                                <span>
-                            <p>ĐÀO TẠO KỸ THUẬT LÀM PHỤ KIỆN
-                              ĐÍNH KẾT & HANDMADE
-                            </p>
-                            <b>3 tháng | 15.000.000vnđ</b>
+                                                    <span>
+                            <p><?php the_title(); ?></p>
+                            <b><?php echo get_field('time'); ?> | <?php echo get_field('price'); ?></b>
                           </span>
+                                                </div>
+                                                <ul class="slide-content__list">
+                                                    <?php the_content(); ?>
+                                                </ul>
+                                                <a href="#form-section"
+                                                   class="btn btn--wave btn--rounded btn-bg--yellow register-btn">Đăng
+                                                    ký</a>
                                             </div>
-                                            <ul class="slide-content__list">
-                                                <li>
-                                                    Môi trường học hiện đại, đầy đủ máy móc thiết bị chuyên dụng
-                                                </li>
-                                                <li>
-                                                    Được giảng dạy trực tiếp bởi các NTK hơn 15 năm kinh nghiệm trong
-                                                    lĩnh vực may đo thời trang
-                                                    xuất khẩu
-                                                </li>
-                                                <li>
-                                                    Cơ hội ra nước ngoài làm việc tại các công ty đối tác của Hera
-                                                    Queen. Tư vấn nghề nghiệp và
-                                                    hỗ trợ việc làm sau khóa học
-                                                </li>
-                                            </ul>
-                                            <a href="#form-section"
-                                               class="btn btn--wave btn--rounded btn-bg--yellow register-btn">Đăng
-                                                ký</a>
                                         </div>
-                                    </div>
+                                        <?php
+                                    }
+                                    wp_reset_postdata();
+                                    ?>
                                     <!-- !slide item -->
-
-                                    <!-- slide item -->
-                                    <div class="swiper-slide"
-                                         style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/bg-course.png');">
-                                        <div class="slide__image">
-                                            <img src="<?php echo THEME_ASSET_WEB; ?>images/lib6.png" class="img-fluid"
-                                                 alt="">
-                                        </div>
-                                        <div class="slide-content">
-                                            <div class="slide-content__heading">
-                          <span>
-                            <h3>KHÓA HỌC</h3>
-                          </span>
-                                                <span>
-                            <p>ĐÀO TẠO KỸ THUẬT LÀM PHỤ KIỆN
-                              ĐÍNH KẾT & HANDMADE
-                            </p>
-                            <b>3 tháng | 15.000.000vnđ</b>
-                          </span>
-                                            </div>
-                                            <ul class="slide-content__list">
-                                                <li>
-                                                    Môi trường học hiện đại, đầy đủ máy móc thiết bị chuyên dụng
-                                                </li>
-                                                <li>
-                                                    Được giảng dạy trực tiếp bởi các NTK hơn 15 năm kinh nghiệm trong
-                                                    lĩnh vực may đo thời trang
-                                                    xuất khẩu
-                                                </li>
-                                                <li>
-                                                    Cơ hội ra nước ngoài làm việc tại các công ty đối tác của Hera
-                                                    Queen. Tư vấn nghề nghiệp và
-                                                    hỗ trợ việc làm sau khóa học
-                                                </li>
-                                            </ul>
-                                            <a href="#form-section"
-                                               class="btn btn--wave btn--rounded btn-bg--yellow register-btn">Đăng
-                                                ký</a>
-                                        </div>
-                                    </div>
-                                    <!-- !slide item -->
-
-                                    <!-- slide item -->
-                                    <div class="swiper-slide"
-                                         style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/bg-course.png');">
-                                        <div class="slide__image">
-                                            <img src="<?php echo THEME_ASSET_WEB; ?>images/lib6.png" class="img-fluid"
-                                                 alt="">
-                                        </div>
-                                        <div class="slide-content">
-                                            <div class="slide-content__heading">
-                          <span>
-                            <h3>KHÓA HỌC</h3>
-                          </span>
-                                                <span>
-                            <p>ĐÀO TẠO KỸ THUẬT LÀM PHỤ KIỆN
-                              ĐÍNH KẾT & HANDMADE
-                            </p>
-                            <b>3 tháng | 15.000.000vnđ</b>
-                          </span>
-                                            </div>
-                                            <ul class="slide-content__list">
-                                                <li>
-                                                    Môi trường học hiện đại, đầy đủ máy móc thiết bị chuyên dụng
-                                                </li>
-                                                <li>
-                                                    Được giảng dạy trực tiếp bởi các NTK hơn 15 năm kinh nghiệm trong
-                                                    lĩnh vực may đo thời trang
-                                                    xuất khẩu
-                                                </li>
-                                                <li>
-                                                    Cơ hội ra nước ngoài làm việc tại các công ty đối tác của Hera
-                                                    Queen. Tư vấn nghề nghiệp và
-                                                    hỗ trợ việc làm sau khóa học
-                                                </li>
-                                            </ul>
-                                            <a href="#form-section"
-                                               class="btn btn--wave btn--rounded btn-bg--yellow register-btn">Đăng
-                                                ký</a>
-                                        </div>
-                                    </div>
-                                    <!-- !slide item -->
-
                                 </div>
                                 <!-- Add Pagination -->
                                 <div class="swiper-pagination"></div>

@@ -6,7 +6,7 @@ function register_banner_type()
 {
     register_post_type('banner', [
         'supports' => [
-            'title','thumbnail'
+            'title', 'thumbnail'
         ],
         'rewrite' => [
             'slug' => 'banners'
@@ -14,11 +14,11 @@ function register_banner_type()
         'has_archive' => true,
         'public' => true,
         'labels' => [
-            'name' => __( 'Banners', 'hera' ),
-            'add_new_item' =>  __( 'Add New Banner', 'hera' ),
-            'edit_item' =>  __( 'Edit Banner', 'hera' ),
-            'all_items' => __( 'All Banners', 'hera' ),
-            'singular_name' => __( 'Banner', 'hera' ),
+            'name' => __('Banners', 'hera'),
+            'add_new_item' => __('Add New Banner', 'hera'),
+            'edit_item' => __('Edit Banner', 'hera'),
+            'all_items' => __('All Banners', 'hera'),
+            'singular_name' => __('Banner', 'hera'),
         ],
         'menu_icon' => 'dashicons-images-alt2'
     ]);
@@ -30,7 +30,7 @@ function register_image_type()
 {
     register_post_type('image', [
         'supports' => [
-            'title','thumbnail'
+            'title', 'thumbnail'
         ],
         'rewrite' => [
             'slug' => 'image'
@@ -38,12 +38,36 @@ function register_image_type()
         'has_archive' => true,
         'public' => true,
         'labels' => [
-            'name' => __( 'Images', 'hera' ),
-            'add_new_item' =>  __( 'Add New Image', 'hera' ),
-            'edit_item' =>  __( 'Edit Image', 'hera' ),
-            'all_items' => __( 'All Images', 'hera' ),
-            'singular_name' => __( 'Image', 'hera' ),
+            'name' => __('Images', 'hera'),
+            'add_new_item' => __('Add New Image', 'hera'),
+            'edit_item' => __('Edit Image', 'hera'),
+            'all_items' => __('All Images', 'hera'),
+            'singular_name' => __('Image', 'hera'),
         ],
         'menu_icon' => 'dashicons-camera-alt'
+    ]);
+}
+
+// Course Post Type
+add_action('init', 'register_course_type');
+function register_course_type()
+{
+    register_post_type('course', [
+        'supports' => [
+            'title', 'thumbnail','editor'
+        ],
+        'rewrite' => [
+            'slug' => 'course'
+        ],
+        'has_archive' => true,
+        'public' => true,
+        'labels' => [
+            'name' => __('Khóa học', 'hera'),
+            'add_new_item' => __('Thêm mới', 'hera'),
+            'edit_item' => __('Sửa', 'hera'),
+            'all_items' => __('Danh sách khóa học', 'hera'),
+            'singular_name' => __('Khóa học', 'hera'),
+        ],
+        'menu_icon' => 'dashicons-welcome-learn-more'
     ]);
 }
