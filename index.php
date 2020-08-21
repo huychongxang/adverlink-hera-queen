@@ -20,13 +20,13 @@ get_header(); ?>
                         <div class="collapse navbar-collapse" id="menu-bar">
                             <ul class="navbar-nav align-items-md-center">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Thông tin khóa học</a>
+                                    <a class="nav-link" href="#thongtin">Thông tin khóa học</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Thư viện ảnh</a>
+                                    <a class="nav-link" href="#thuvien">Thư viện ảnh</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Liên hệ</a>
+                                    <a class="nav-link" href="#form-section">Liên hệ</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link btn btn--rounded btn--yellow btn--wave" href="#form-section">đăng
@@ -56,19 +56,21 @@ get_header(); ?>
             <div class="banner-slide swiper-container">
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide banner__item">
-                        <img src="<?php echo THEME_ASSET_WEB; ?>images/banner-img-COVER-13.png" alt=""
-                             class="img-fluid">
-                    </div>
-                    <div class="swiper-slide banner__item">
-                        <img src="<?php echo THEME_ASSET_WEB; ?>images/banner-img-COVER-13.png" alt=""
-                             class="img-fluid">
-                    </div>
-                    <div class="swiper-slide banner__item">
-                        <img src="<?php echo THEME_ASSET_WEB; ?>images/banner-img-COVER-13.png" alt=""
-                             class="img-fluid">
-                    </div>
+                    <?php
+                    $banners = new WP_Query([
+                        'post_type' => 'banner',
+                    ]);
 
+                    while ($banners->have_posts()) {
+                        $banners->the_post(); ?>
+                        <div class="swiper-slide banner__item">
+                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>"
+                                 class="img-fluid">
+                        </div>
+                        <?php
+                    }
+                    wp_reset_postdata();
+                    ?>
                 </div>
             </div>
             <a href="#form-section" class="btn btn--wave btn--rounded btn-bg--yellow register-btn">Đăng ký</a>
@@ -89,7 +91,8 @@ get_header(); ?>
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
                             <div class="box">
-                                <img class="img-fluid box__image" src="<?php echo THEME_ASSET_WEB; ?>images/keo.png" alt="">
+                                <img class="img-fluid box__image" src="<?php echo THEME_ASSET_WEB; ?>images/keo.png"
+                                     alt="">
                                 <div class="box-detail">
                                     <h3 class="box__title">CHUYÊN SÂU VỀ KỸ THUẬT THỜI TRANG</h3>
                                     <p class="box__desc">
@@ -99,7 +102,8 @@ get_header(); ?>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="box">
-                                <img class="img-fluid box__image" src="<?php echo THEME_ASSET_WEB; ?>images/may-khau.png" alt="">
+                                <img class="img-fluid box__image"
+                                     src="<?php echo THEME_ASSET_WEB; ?>images/may-khau.png" alt="">
                                 <div class="box-detail">
                                     <h3 class="box__title">CƠ SỞ VẬT CHẤT TIỆN NGHI</h3>
                                     <p class="box__desc">
@@ -111,7 +115,8 @@ get_header(); ?>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="box">
-                                <img class="img-fluid box__image" src="<?php echo THEME_ASSET_WEB; ?>images/kimchi.png" alt="">
+                                <img class="img-fluid box__image" src="<?php echo THEME_ASSET_WEB; ?>images/kimchi.png"
+                                     alt="">
                                 <div class="box-detail">
                                     <h3 class="box__title">PHƯƠNG PHÁP DẠY CHUYÊN NGHIỆP</h3>
                                     <p class="box__desc">
@@ -140,7 +145,8 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="info" style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/39621-O2DGUE-04.png');">
+            <div id="thongtin" class="info"
+                 style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/39621-O2DGUE-04.png');">
                 <div class="background--full"
                      style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/39621-O2DGUE-04.png'); position: absolute; width: 100%; height: 100%; background-position: center; background-size: cover; top: 0; left: 0;">
                 </div>
@@ -174,7 +180,8 @@ get_header(); ?>
                                     <div class="swiper-slide"
                                          style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/bg-course.png');">
                                         <div class="slide__image">
-                                            <img src="<?php echo THEME_ASSET_WEB; ?>images/abc.png" class="img-fluid" alt="">
+                                            <img src="<?php echo THEME_ASSET_WEB; ?>images/abc.png" class="img-fluid"
+                                                 alt="">
                                         </div>
                                         <div class="slide-content">
                                             <div class="slide-content__heading">
@@ -214,7 +221,8 @@ get_header(); ?>
                                     <div class="swiper-slide"
                                          style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/bg-course.png');">
                                         <div class="slide__image">
-                                            <img src="<?php echo THEME_ASSET_WEB; ?>images/lib6.png" class="img-fluid" alt="">
+                                            <img src="<?php echo THEME_ASSET_WEB; ?>images/lib6.png" class="img-fluid"
+                                                 alt="">
                                         </div>
                                         <div class="slide-content">
                                             <div class="slide-content__heading">
@@ -254,7 +262,8 @@ get_header(); ?>
                                     <div class="swiper-slide"
                                          style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/bg-course.png');">
                                         <div class="slide__image">
-                                            <img src="<?php echo THEME_ASSET_WEB; ?>images/lib6.png" class="img-fluid" alt="">
+                                            <img src="<?php echo THEME_ASSET_WEB; ?>images/lib6.png" class="img-fluid"
+                                                 alt="">
                                         </div>
                                         <div class="slide-content">
                                             <div class="slide-content__heading">
@@ -320,7 +329,8 @@ get_header(); ?>
                                 <li><span id="seconds">4</span>Giây</li>
                             </ul>
 
-                            <div class="voucher" style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/border.png');">
+                            <div class="voucher"
+                                 style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/border.png');">
                                 <p>Chương trình ưu đãi áp dụng từ
                                     11/08/2020 đến 20/08/2020</p>
                             </div>
@@ -365,7 +375,8 @@ get_header(); ?>
         <!-- !section form -->
 
         <!-- section library -->
-        <section class="library" style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/lib-bg.png');">
+        <section id="thuvien" class="library"
+                 style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/lib-bg.png');">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
@@ -449,7 +460,8 @@ get_header(); ?>
             <div class="row text-white">
 
                 <div class="col-md-4">
-                    <a href="#"><img class="img-fluid" src="<?php echo THEME_ASSET_WEB; ?>images/logo-footer.png" alt=""></a>
+                    <a href="#"><img class="img-fluid" src="<?php echo THEME_ASSET_WEB; ?>images/logo-footer.png"
+                                     alt=""></a>
                 </div>
 
                 <div class="col-md-5">
