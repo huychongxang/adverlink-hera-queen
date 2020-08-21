@@ -94,9 +94,9 @@ get_header(); ?>
                                 <img class="img-fluid box__image" src="<?php echo THEME_ASSET_WEB; ?>images/keo.png"
                                      alt="">
                                 <div class="box-detail">
-                                    <h3 class="box__title">CHUYÊN SÂU VỀ KỸ THUẬT THỜI TRANG</h3>
+                                    <h3 class="box__title"><?php echo get_field('box_title_1'); ?></h3>
                                     <p class="box__desc">
-                                        Học tập ở môi trường hiện đại, đầy đủ máy móc thiết bị chuyên dụng</p>
+                                        <?php echo get_field('box_content_1'); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -105,11 +105,9 @@ get_header(); ?>
                                 <img class="img-fluid box__image"
                                      src="<?php echo THEME_ASSET_WEB; ?>images/may-khau.png" alt="">
                                 <div class="box-detail">
-                                    <h3 class="box__title">CƠ SỞ VẬT CHẤT TIỆN NGHI</h3>
+                                    <h3 class="box__title"><?php echo get_field('box_title_2'); ?></h3>
                                     <p class="box__desc">
-                                        Được giảng dạy trực tiếp bởi các NTK hơn 15 năm kinh nghiệm trong lĩnh vực may
-                                        đo
-                                        thời trang xuất khẩu</p>
+                                        <?php echo get_field('box_content_2'); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -118,11 +116,9 @@ get_header(); ?>
                                 <img class="img-fluid box__image" src="<?php echo THEME_ASSET_WEB; ?>images/kimchi.png"
                                      alt="">
                                 <div class="box-detail">
-                                    <h3 class="box__title">PHƯƠNG PHÁP DẠY CHUYÊN NGHIỆP</h3>
+                                    <h3 class="box__title"><?php echo get_field('box_title_3'); ?></h3>
                                     <p class="box__desc">
-                                        Cơ hội ra nước ngoài làm việc tại các công ty đối tác của Hera Queen. Tư vấn
-                                        nghề
-                                        nghiệp và hỗ trợ việc làm sau khóa học</p>
+                                        <?php echo get_field('box_content_3'); ?></p>
                                 </div>
                             </div>
                         </div>
