@@ -159,6 +159,7 @@ function register_custom_fields_frame_1()
         ]);
     }
 }
+
 // Iframe 2 - video youtube
 add_action('after_setup_theme', 'register_custom_fields_frame_2');
 function register_custom_fields_frame_2()
@@ -172,7 +173,29 @@ function register_custom_fields_frame_2()
                     'key' => 'video_frame_2',
                     'label' => 'Link video youtube',
                     'name' => 'video_frame_2',
-                    'type' => 'oembed',
+                    'type' => 'url',
+                    'prefix' => '',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => [
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ],
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                    'readonly' => 0,
+                    'disabled' => 0,
+                ],
+                [
+                    'key' => 'youtube_page',
+                    'label' => 'Youtube Channel',
+                    'name' => 'youtube_page',
+                    'type' => 'url',
                     'prefix' => '',
                     'instructions' => '',
                     'required' => 0,

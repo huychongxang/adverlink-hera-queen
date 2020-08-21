@@ -129,13 +129,21 @@ get_header(); ?>
             <div class="video-sc">
                 <div class="container">
                     <div class="row">
+                        <?php
+                        $url = get_field('video_frame_2');
+                        preg_match("#(?<=v=|v\/|vi=|vi\/|youtu.be\/)[a-zA-Z0-9_-]{11}#", $url, $matches);
+                        $youtubeId = $matches[0];
+                        ?>
                         <div class="col-md-10 offset-md-1 text-right">
                             <div class="embed-responsive embed-responsive-16by9">
+
                                 <iframe class="embed-responsive-item"
-                                        src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                                        src="https://www.youtube.com/embed/<?php echo $youtubeId; ?>"
                                         allowfullscreen></iframe>
                             </div>
-                            <a class="d-inline-block" href="">Xem thêm <i class="fal fa-long-arrow-right"></i></a>
+                            <a class="d-inline-block" href="<?php echo get_field('youtube_page'); ?>" target="_blank">Xem
+                                thêm <i
+                                        class="fal fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
