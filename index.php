@@ -338,43 +338,18 @@ get_header(); ?>
                 </div>
 
 
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <a data-fancybox="gallery" href="<?php echo THEME_ASSET_WEB; ?>images/lib1.png">
-                            <img class="img-fluid" src="<?php echo THEME_ASSET_WEB; ?>images/lib1.png">
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a data-fancybox="gallery" href="<?php echo THEME_ASSET_WEB; ?>images/lib2.png">
-                            <img class="img-fluid" src="<?php echo THEME_ASSET_WEB; ?>images/lib2.png">
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a data-fancybox="gallery" href="<?php echo THEME_ASSET_WEB; ?>images/lib3.png">
-                            <img class="img-fluid" src="<?php echo THEME_ASSET_WEB; ?>images/lib3.png">
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a data-fancybox="gallery" href="<?php echo THEME_ASSET_WEB; ?>images/lib4.png">
-                            <img class="img-fluid" src="<?php echo THEME_ASSET_WEB; ?>images/lib4.png">
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a data-fancybox="gallery" href="<?php echo THEME_ASSET_WEB; ?>images/lib5.png">
-                            <img class="img-fluid" src="<?php echo THEME_ASSET_WEB; ?>images/lib5.png">
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a data-fancybox="gallery" href="<?php echo THEME_ASSET_WEB; ?>images/lib6.png">
-                            <img class="img-fluid" src="<?php echo THEME_ASSET_WEB; ?>images/lib6.png">
-                        </a>
-                    </div>
+                <div class="row" id="root-images">
+<!--                    <div class="col-md-6 col-lg-4">-->
+<!--                        <a data-fancybox="gallery" href="--><?php //echo THEME_ASSET_WEB; ?><!--images/lib1.png">-->
+<!--                            <img class="img-fluid" src="--><?php //echo THEME_ASSET_WEB; ?><!--images/lib1.png">-->
+<!--                        </a>-->
+<!--                    </div>-->
                 </div>
 
                 <div class="row ">
                     <div class="col-12">
                         <nav>
-                            <ul class="pagination justify-content-center">
+                            <ul id="root-pagination" class="pagination justify-content-center">
                                 <li class="page-item">
                                     <a class="page-link" href="#" aria-label="Previous">
                                         <span aria-hidden="true">&laquo;</span>

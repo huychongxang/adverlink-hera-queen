@@ -29,6 +29,7 @@ add_action('init', 'register_image_type');
 function register_image_type()
 {
     register_post_type('image', [
+        'show_in_rest' => true,
         'supports' => [
             'title', 'thumbnail'
         ],

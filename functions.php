@@ -40,3 +40,7 @@ require_once(THEME_DIR . '/functions/register_custom_type.php');
  * Handle Ajax
  */
 require_once(THEME_DIR . '/functions/handle_ajax.php');
+/**
+ * Register API
+ */
+require_once(THEME_DIR . '/functions/register_api.php');
