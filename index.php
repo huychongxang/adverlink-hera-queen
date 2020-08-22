@@ -244,7 +244,14 @@ get_header(); ?>
                     <div class="col-lg-6">
                         <div class="countdown-container">
                             <h2>ƯU ĐÃI SẼ KẾT THÚC SAU:</h2>
-
+                            <?php $time_start = get_field('time_start', false, false);
+                            $time_start = strtotime($time_start);
+                            $now =  current_time('timestamp');
+                            $secondsFromStartToNow = $now - $time_start;
+                            $result = $secondsFromStartToNow % 432000;
+                            $conlai = 432000 - $result;
+                            ?>
+                            <span id="timeconlai" value="<?php echo $conlai; ?>" hidden></span>
                             <ul class="countdown">
                                 <li><span id="days">1</span>Ngày</li>
                                 <li><span id="hours">2</span>Giờ</li>

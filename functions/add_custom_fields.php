@@ -285,6 +285,57 @@ function register_custom_fields_frame_3()
 }
 
 // Footer
+add_action('after_setup_theme', 'register_custom_fields_frame_5');
+function register_custom_fields_frame_5()
+{
+    if (function_exists('acf_add_local_field_group')) {
+        acf_add_local_field_group([
+            'key' => 'group_frame_5',
+            'title' => 'Đăng ký khóa học',
+            'fields' => [
+                [
+                    'key' => 'time_start',
+                    'label' => 'Thời gian bắt đầu',
+                    'name' => 'time_start',
+                    'type' => 'date_time_picker',
+                    'prefix' => '',
+                    'instructions' => '',
+                    'required' => 1,
+                    'conditional_logic' => 0,
+                    'wrapper' => [
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ],
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                    'readonly' => 0,
+                    'disabled' => 0,
+                ],
+            ],
+            'location' => [
+                [
+                    [
+                        'param' => 'post_type',
+                        'operator' => '==',
+                        'value' => 'page',
+                    ],
+                ],
+            ],
+            'menu_order' => 0,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+        ]);
+    }
+}
+
+// Footer
 add_action('after_setup_theme', 'register_custom_fields_frame_footer');
 function register_custom_fields_frame_footer()
 {
