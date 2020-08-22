@@ -688,6 +688,32 @@ function register_custom_fields_booking_post_type()
                     'readonly' => 0,
                     'disabled' => 0,
                 ],
+                [
+                    'key' => 'status',
+                    'label' => 'Trạng thái',
+                    'name' => 'status',
+                    'type' => 'select',
+                    'choices' => array(
+                        0 => 'Chưa xử lý',
+                        1 => 'Đã xử lý'
+                    ),
+                    'prefix' => '',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => [
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ],
+                    'default_value' => 0,
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                    'readonly' => 0,
+                    'disabled' => 0,
+                ],
             ],
             'location' => [
                 [

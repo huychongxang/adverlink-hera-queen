@@ -29,7 +29,7 @@ function submit_register_course()
     // ... Do some code here, like storing inputs to the database, but don't forget to properly sanitize input data!
     $booking_id = wp_insert_post([
         'post_type' => 'booking',
-        'post_title' => $_POST['name'] . ' + ' . $_POST['phone'],
+        'post_title' => $_POST['name'] . ' - ' . $_POST['phone'],
         'post_status' => 'publish',
         'comment_status' => 'closed',
         'ping_status' => 'closed',
@@ -39,6 +39,7 @@ function submit_register_course()
         add_post_meta($booking_id, 'phone', trim($_POST['phone']));
         add_post_meta($booking_id, 'email', trim($_POST['email']));
         add_post_meta($booking_id, 'course', trim($_POST['course']));
+        add_post_meta($booking_id, 'status', 0);
     }
     // Don't forget to exit at the end of processing
     exit(json_encode($response));
