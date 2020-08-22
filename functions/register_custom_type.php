@@ -54,7 +54,7 @@ function register_course_type()
 {
     register_post_type('course', [
         'supports' => [
-            'title', 'thumbnail','editor'
+            'title', 'thumbnail', 'editor'
         ],
         'rewrite' => [
             'slug' => 'course'
@@ -69,5 +69,26 @@ function register_course_type()
             'singular_name' => __('Khóa học', 'hera'),
         ],
         'menu_icon' => 'dashicons-welcome-learn-more'
+    ]);
+}
+
+// Booking Post Type
+add_action('init', 'register_booking_type');
+function register_booking_type()
+{
+    register_post_type('booking', [
+        'rewrite' => [
+            'slug' => 'booking'
+        ],
+        'has_archive' => true,
+        'public' => true,
+        'labels' => [
+            'name' => __('Danh sách đăng ký', 'hera'),
+            'add_new_item' => __('Thêm mới', 'hera'),
+            'edit_item' => __('Sửa', 'hera'),
+            'all_items' => __('Danh sách đăng ký', 'hera'),
+            'singular_name' => __('Danh sách', 'hera'),
+        ],
+        'menu_icon' => 'dashicons-buddicons-buddypress-logo'
     ]);
 }

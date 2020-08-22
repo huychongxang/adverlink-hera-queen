@@ -27,7 +27,19 @@ function submit_register_course()
     }
 
     // ... Do some code here, like storing inputs to the database, but don't forget to properly sanitize input data!
-
+    $booking_id = wp_insert_post([
+        'post_type' => 'booking',
+        'post_title' => $_POST['name'] . ' + ' . $_POST['phone'],
+        'post_status' => 'publish',
+        'comment_status' => 'closed',
+        'ping_status' => 'closed',
+    ]);
+    if ($booking_id) {
+        add_post_meta($booking_id, 'name', trim($_POST['name']));
+        add_post_meta($booking_id, 'phone', trim($_POST['phone']));
+        add_post_meta($booking_id, 'email', trim($_POST['email']));
+        add_post_meta($booking_id, 'course', trim($_POST['course']));
+    }
     // Don't forget to exit at the end of processing
     exit(json_encode($response));
 }

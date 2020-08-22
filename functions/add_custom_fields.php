@@ -590,3 +590,120 @@ function register_custom_fields_course_post_type()
         ]);
     }
 }
+
+// Booking Post Type
+add_action('after_setup_theme', 'register_custom_fields_booking_post_type');
+function register_custom_fields_booking_post_type()
+{
+    if (function_exists('acf_add_local_field_group')) {
+        acf_add_local_field_group([
+            'key' => 'info',
+            'title' => 'Thông tin',
+            'fields' => [
+                [
+                    'key' => 'name',
+                    'label' => 'Tên',
+                    'name' => 'name',
+                    'type' => 'text',
+                    'prefix' => '',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => [
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ],
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                    'readonly' => 0,
+                    'disabled' => 0,
+                ],
+                [
+                    'key' => 'phone',
+                    'label' => 'Số điện thoại',
+                    'name' => 'phone',
+                    'type' => 'text',
+                    'prefix' => '',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => [
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ],
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                    'readonly' => 0,
+                    'disabled' => 0,
+                ],
+                [
+                    'key' => 'email',
+                    'label' => 'Email',
+                    'name' => 'email',
+                    'type' => 'text',
+                    'prefix' => '',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => [
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ],
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                    'readonly' => 0,
+                    'disabled' => 0,
+                ],
+                [
+                    'key' => 'course',
+                    'label' => 'Khóa học',
+                    'name' => 'course',
+                    'type' => 'text',
+                    'prefix' => '',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => [
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ],
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                    'readonly' => 0,
+                    'disabled' => 0,
+                ],
+            ],
+            'location' => [
+                [
+                    [
+                        'param' => 'post_type',
+                        'operator' => '==',
+                        'value' => 'booking',
+                    ],
+                ],
+            ],
+            'menu_order' => 0,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+        ]);
+    }
+}
