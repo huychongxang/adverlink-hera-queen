@@ -284,7 +284,7 @@ function register_custom_fields_frame_3()
     }
 }
 
-// Footer
+// Frame 5
 add_action('after_setup_theme', 'register_custom_fields_frame_5');
 function register_custom_fields_frame_5()
 {
@@ -411,9 +411,9 @@ function register_custom_fields_frame_footer()
                     'disabled' => 0,
                 ],
                 [
-                    'key' => 'phone',
+                    'key' => 'phone_footer',
                     'label' => 'Số điện thoại',
-                    'name' => 'phone',
+                    'name' => 'phone_footer',
                     'type' => 'text',
                     'prefix' => '',
                     'instructions' => '',
@@ -433,9 +433,9 @@ function register_custom_fields_frame_footer()
                     'disabled' => 0,
                 ],
                 [
-                    'key' => 'email',
+                    'key' => 'email_footer',
                     'label' => 'Email',
-                    'name' => 'email',
+                    'name' => 'email_footer',
                     'type' => 'text',
                     'prefix' => '',
                     'instructions' => '',
