@@ -246,7 +246,7 @@ get_header(); ?>
                             <h2>ƯU ĐÃI SẼ KẾT THÚC SAU:</h2>
                             <?php $time_start = get_field('time_start', false, false);
                             $time_start = strtotime($time_start);
-                            $now =  current_time('timestamp');
+                            $now = current_time('timestamp');
                             $secondsFromStartToNow = $now - $time_start;
                             $result = $secondsFromStartToNow % 432000;
                             $conlai = 432000 - $result;
@@ -261,8 +261,12 @@ get_header(); ?>
 
                             <div class="voucher"
                                  style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/border.png');">
+                                <?php
+                                $date_start = get_field('date_start');
+                                $date_end = get_field('date_end');
+                                ?>
                                 <p>Chương trình ưu đãi áp dụng từ
-                                    11/08/2020 đến 20/08/2020</p>
+                                    <?php echo $date_start ?> đến <?php echo $date_end ?></p>
                             </div>
                         </div>
                     </div>
