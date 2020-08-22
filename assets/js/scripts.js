@@ -90,3 +90,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const deadline = new Date(Date.parse(new Date()) + parseInt(senconds) * 1000);
     initializeClock("countdown", deadline);
 });
+
+jQuery(document).ready(function ($) {
+
+    $('#form-register').on('submit', function (e) {
+        e.preventDefault();
+
+        var $form = $(this);
+        var data = jQuery(this).serialize();
+        jQuery.ajax({
+            action: 'submit_register_course',
+            type: "POST",
+            url: "/wp-admin/admin-ajax.php",
+            data: data,
+            success: function (data) {
+                var data = JSON.parse(data);
+                if (data.error) {
+                    alert('Đăng ký thất bại');
+                } else {
+                    alert("Đăng ký thành công");
+                }
+            }
+        });
+    });
+
+});

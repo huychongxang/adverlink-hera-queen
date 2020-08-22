@@ -275,29 +275,33 @@ get_header(); ?>
                             <h2>ĐĂNG KÝ KHÓA HỌC NGAY</h2>
                             <h3>ĐỂ NHẬN ƯU ĐÃI &nbsp; <span>50%</span> &nbsp; HỌC PHÍ</h3>
 
-                            <form style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/form.png');">
+                            <form style="background-image: url('<?php echo THEME_ASSET_WEB; ?>images/form.png');"
+                                  method="post"
+                                  id="form-register"
+                                  action="<?php echo admin_url('admin-ajax.php'); ?>"
+                            >
                                 <div class="form-group">
                                     <label for="text">Họ tên:</label>
-                                    <input type="text" class="form-control" placeholder="Tên của bạn...">
+                                    <input name="name" type="text" class="form-control" placeholder="Tên của bạn...">
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Số điện thoại(*):</label>
-                                    <input type="tel" class="form-control" placeholder="Số điện thoại của bạn...">
+                                    <input name="phone" type="tel" class="form-control"
+                                           placeholder="Số điện thoại của bạn..." required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email:</label>
-                                    <input type="email" class="form-control" placeholder="Email của bạn...">
+                                    <input name="email" type="email" class="form-control"
+                                           placeholder="Email của bạn...">
                                 </div>
                                 <div class="form-group">
                                     <label for="course">Khóa học quan tâm</label>
-                                    <select id="course" class="form-control">
+                                    <select name="course" id="course" class="form-control" required>
                                         <?php
                                         $courses = new WP_Query([
                                             'post_type' => 'course'
                                         ]);
                                         ?>
-
-                                        <option selected>Choose...</option>
                                         <?php
                                         while ($courses->have_posts()) {
                                             $courses->the_post(); ?>
@@ -308,6 +312,8 @@ get_header(); ?>
                                         ?>
                                     </select>
                                 </div>
+                                <input type="hidden" name="action" value="submit_register_course">
+                                <?php wp_nonce_field( 'submit_register_course_nonce', 'name_of_nonce_field' ); ?>
                                 <button type="submit" class="btn btn-primary btn--rounded btn--wave btn-bg--yellow">ĐĂNG
                                     KÝ
                                 </button>
