@@ -398,11 +398,11 @@ get_header(); ?>
                         </p>
                         <p>
                             <i class="fas fa-phone-alt"></i>
-                            <?php echo get_field('phone'); ?>
+                            <?php echo get_field('phone_footer'); ?>
                         </p>
                         <p>
                             <i class="fas fa-envelope"></i>
-                            <?php echo get_field('email'); ?>
+                            <?php echo get_field('email_footer'); ?>
                         </p>
                     </div>
                 </div>
