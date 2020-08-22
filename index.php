@@ -291,10 +291,21 @@ get_header(); ?>
                                 <div class="form-group">
                                     <label for="course">Khóa học quan tâm</label>
                                     <select id="course" class="form-control">
+                                        <?php
+                                        $courses = new WP_Query([
+                                            'post_type' => 'course'
+                                        ]);
+                                        ?>
+
                                         <option selected>Choose...</option>
-                                        <option value="0">Đào tạo Kỹ thuật đính kết làm phụ kiện & handmade</option>
-                                        <option value="1">Đào tạo Kỹ thuật đính kết làm phụ kiện & handmade</option>
-                                        <option value="2">Đào tạo Kỹ thuật đính kết làm phụ kiện & handmade</option>
+                                        <?php
+                                        while ($courses->have_posts()) {
+                                            $courses->the_post(); ?>
+                                            <option value="<?php the_title(); ?> "><?php the_title(); ?></option>
+                                            <?php
+                                        }
+                                        wp_reset_postdata();
+                                        ?>
                                     </select>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn--rounded btn--wave btn-bg--yellow">ĐĂNG
