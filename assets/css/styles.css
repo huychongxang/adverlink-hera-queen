@@ -552,7 +552,7 @@ header {
   background-color: #f2f2f2; }
   @media (max-width: 1023px) {
     .inner-content {
-      padding: 4rem 2rem; } }
+      padding: 4rem 0rem; } }
 
 .info {
   padding-top: 6rem;
@@ -582,8 +582,8 @@ header {
   .info__heading .register-btn {
     top: unset;
     right: unset;
-    bottom: 25%;
-    left: 44%;
+    bottom: 14%;
+    left: 32%;
     position: absolute;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -852,6 +852,24 @@ header {
       color: #000000;
       margin: 0 auto;
       display: table; }
+    .course-slide .swiper-slide:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 161px;
+      height: 300px;
+      background-color: #f9bf15;
+      border-radius: 20px 0 0 0;
+      z-index: -1; }
+      @media (max-width: 767px) {
+        .course-slide .swiper-slide:after {
+          height: 255px !important;
+          width: 40% !important; } }
+      @media (max-width: 1023px) {
+        .course-slide .swiper-slide:after {
+          height: 400px;
+          width: 40%; } }
   .course-slide .swiper-button-prev {
     bottom: 0;
     top: unset;
@@ -859,7 +877,8 @@ header {
     color: #000000;
     left: 0;
     -webkit-transform: translateX(400%);
-    transform: translateX(400%); }
+    transform: translateX(400%);
+    outline: none; }
     .course-slide .swiper-button-prev:after {
       content: ""; }
     .course-slide .swiper-button-prev i {
@@ -871,7 +890,8 @@ header {
     color: #000000;
     right: 0;
     -webkit-transform: translateX(-400%);
-    transform: translateX(-400%); }
+    transform: translateX(-400%);
+    outline: none; }
     .course-slide .swiper-button-next:after {
       content: ""; }
     .course-slide .swiper-button-next i {
@@ -882,15 +902,18 @@ header {
     border: 1px solid #000000;
     background-color: transparent;
     width: 12px;
-    height: 12px; }
+    height: 12px;
+    border-radius: 50%; }
   .course-slide .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background-color: #000000; }
-  .course-slide .swiper-slide-active {
-    -webkit-transform: scale(1.1) !important;
-    transform: scale(1.1) !important; }
-    .course-slide .swiper-slide-active .btn--wave:before {
-      -webkit-animation: waves 1s infinite !important;
-      animation: waves 1s infinite !important; }
+    background-color: #000000;
+    border-radius: 50%; }
+  @media (min-width: 1025px) {
+    .course-slide .swiper-slide-active {
+      -webkit-transform: scale(1.1) !important;
+      transform: scale(1.1) !important; } }
+  .course-slide .swiper-slide-active .btn--wave:before {
+    -webkit-animation: waves 1s infinite !important;
+    animation: waves 1s infinite !important; }
   .course-slide .swiper-slide .btn--wave:before {
     -webkit-animation: unset;
     animation: unset; }
@@ -923,7 +946,7 @@ header {
   -ms-flex-pack: justify;
   justify-content: space-between; }
   .slide-content__heading span:first-child {
-    width: 40%;
+    width: 43%;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -942,8 +965,7 @@ header {
   .slide-content__heading span:last-child {
     -webkit-box-flex: 1;
     -ms-flex: 1;
-    flex: 1;
-    padding: 0 0 0 1.2rem; }
+    flex: 1; }
   .slide-content__heading p {
     font-size: 1.4rem;
     font-weight: 400;
