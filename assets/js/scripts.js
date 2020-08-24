@@ -1,19 +1,19 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const bannerSlide = new Swiper(".banner-slide", {
+document.addEventListener('DOMContentLoaded', function () {
+  const bannerSlide = new Swiper('.banner-slide', {
     autoplay: {
       delay: 5000,
     },
   });
 
-  const abc = new Swiper(".course-slide", {
+  const abc = new Swiper('.course-slide', {
     pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
+      el: '.swiper-pagination',
+      type: 'bullets',
       clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     autoplay: {
       delay: 10000,
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     spaceBetween: 0,
     slideToClickedSlide: true,
     speed: 500,
-    effect: "coverflow",
+    effect: 'coverflow',
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 320px
@@ -64,10 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function initializeClock(id, endtime) {
-    const daysSpan = document.querySelector("#days");
-    const hoursSpan = document.querySelector("#hours");
-    const minutesSpan = document.querySelector("#minutes");
-    const secondsSpan = document.querySelector("#seconds");
+    const daysSpan = document.querySelector('#days');
+    const hoursSpan = document.querySelector('#hours');
+    const minutesSpan = document.querySelector('#minutes');
+    const secondsSpan = document.querySelector('#seconds');
 
     function updateClock() {
       const t = getTimeRemaining(endtime);
@@ -75,13 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
       if (t.total <= 0) {
         clearInterval(timeinterval);
         const deadline = new Date(Date.parse(new Date()) + 6 * 1000);
-        initializeClock("countdown", deadline);
+        initializeClock('countdown', deadline);
       }
 
       daysSpan.innerHTML = t.days;
-      hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
-      minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
-      secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
     }
 
     updateClock();
@@ -89,5 +89,5 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // 5 days = 432000000 seconds
   const deadline = new Date(Date.parse(new Date()) + 432000000);
-  initializeClock("countdown", deadline);
+  initializeClock('countdown', deadline);
 });
