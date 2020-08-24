@@ -7,6 +7,7 @@ function getImageRegister()
         'callback' => "imagesResults"
     ]);
 }
+haha
 
 function imagesResults($data)
 {
