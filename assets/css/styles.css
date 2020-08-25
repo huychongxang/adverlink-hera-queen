@@ -702,8 +702,8 @@ header {
 .info__heading .register-btn {
   top: unset;
   right: unset;
-  bottom: 14%;
-  left: 32%;
+  bottom: 19%;
+  left: 44%;
   position: absolute;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
