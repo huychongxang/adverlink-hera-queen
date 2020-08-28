@@ -655,6 +655,27 @@ header {
   font-weight: 500;
 }
 
+@media (max-width: 768px) {
+
+  .banner .register-btn,
+  .info__heading .register-btn {
+    bottom: 0 !important;
+    font-size: 1rem;
+  }
+
+  .navbar-brand img {
+    height: 45px;
+  }
+
+  .navbar-toggler-icon {
+    height: auto;
+  }
+
+  .info__image img {
+    height: 100%;
+  }
+}
+
 .inner-content {
   padding: 12rem 10rem;
   background-color: #f2f2f2;
@@ -761,6 +782,7 @@ header {
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 
 .library .pagination .page-item.active .page-link {
