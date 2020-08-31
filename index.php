@@ -265,8 +265,8 @@ get_header(); ?>
                                 $date_start = get_field('date_start');
                                 $date_end = get_field('date_end');
                                 ?>
-                                <p>Chương trình ưu đãi áp dụng từ
-                                    <?php echo $date_start ?> đến <?php echo $date_end ?></p>
+                                <p>GỌI NGAY HOTLINE</p>
+                                <p><?php echo get_field('phone_footer'); ?></p>
                             </div>
                         </div>
                     </div>
