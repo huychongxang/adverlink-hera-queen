@@ -266,7 +266,7 @@ get_header(); ?>
                                 $date_end = get_field('date_end');
                                 ?>
                                 <p>GỌI NGAY HOTLINE</p>
-                                <p>0981 224 515</p>
+                                <p><?php echo get_field('phone_footer'); ?></p>
                             </div>
                         </div>
                     </div>
